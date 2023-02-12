@@ -1,4 +1,3 @@
-
 var template = document.getElementById("template");
 console.log(localStorage.length);
 
@@ -24,7 +23,6 @@ for(let i=0;i<localStorage.length;i++)
     }else{
         card.getElementById("img").innerHTML = "Image not provided by MarvelAPI";
     }
-    
 
     card.getElementById("more-info").addEventListener('click',function(){
         localStorage.setItem('id',temp.id);
@@ -38,6 +36,7 @@ for(let i=0;i<localStorage.length;i++)
         alert('Removed from Favourites!')
 
     });
+
 // appending to the list
     document.getElementById("superhero-list").appendChild(card);
 }
