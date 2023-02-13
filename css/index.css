@@ -170,17 +170,6 @@ button{
     font-size: 2rem;
 }
 
-#bio span
-{
-    color: white;
-    font-size: 2rem;
-}
-#bio
-{
-    color: white;
-    font-size: 1.5rem;
-    padding-left: 20px;
-}
 img{
     display: block;
     margin: auto;

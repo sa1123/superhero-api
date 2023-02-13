@@ -1,19 +1,19 @@
 var template = document.getElementById("template");
-console.log(localStorage.length);
 
 // traversing on local storage for favourites
-for(let i=0;i<localStorage.length;i++)
+for(let i = 0; i < localStorage.length; i++)
 {
-    if(localStorage.key(i) == 'id'){
+
+    console.log(localStorage.key(i));
+
+    if(isNaN(localStorage.key(i))){
         continue;
     }
     let temp = JSON.parse(localStorage.getItem(localStorage.key(i)));
     console.log(temp);
     var card = template.content.cloneNode(true);
-
-    console.log(card);
     
-    //from here we add all the data of favourite character
+    //Data of character
     card.getElementById("name").innerHTML = 'Name : ' + temp.name;
     card.getElementById("id").innerHTML = 'Id : ' + temp.id;
     if(temp.squareImage){
