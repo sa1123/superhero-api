@@ -3,14 +3,10 @@ var template = document.getElementById("template");
 // traversing on local storage for favourites
 for(let i = 0; i < localStorage.length; i++)
 {
-
-    console.log(localStorage.key(i));
-
     if(isNaN(localStorage.key(i))){
         continue;
     }
     let temp = JSON.parse(localStorage.getItem(localStorage.key(i)));
-    console.log(temp);
     var card = template.content.cloneNode(true);
     
     //Data of character

@@ -18,9 +18,7 @@ document.getElementById("form").addEventListener('keyup', function(){
 // for getting the url
 function getUrl(){
     var query = document.getElementById('search-character').value;
-    console.log(query);
     if(!query){
-        console.log('Name cannot be empty!');
         return "http://gateway.marvel.com/v1/public/comics?ts=1&apikey=ee77679846ae512c45cd75dad1704dfb&hash=1fe14f8427c9003551a27df276a5daed"
     }else{
         return `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${query}&apikey=ee77679846ae512c45cd75dad1704dfb&hash=1fe14f8427c9003551a27df276a5daed&ts=1`
@@ -35,7 +33,6 @@ function display(data){
     var superHeroList = document.getElementById('superhero-list');
     superHeroList.innerHTML = "";
     var results = data.data.results;
-    console.log(results);
     if(!results){
         document.getElementById('search-character').value = "";
         window.alert("No super hero found!");
@@ -56,7 +53,6 @@ function display(data){
                 window.location.assign('./about.html');
             });
             card.getElementById('fav').addEventListener('click', function(){
-               
                 var index = localStorage.length;
                 var data = JSON.stringify(result);
                 localStorage.setItem(result.id, data);

@@ -32,8 +32,6 @@ function fetch(){
         linebreak = document.createElement("br");
         power.appendChild(linebreak);
 
-        console.log(response.data);
-
         var p = document.createElement('p');
         p.innerText = "Number of Series Available : " + response.data.results[0].series.available;
         power.appendChild(p);
